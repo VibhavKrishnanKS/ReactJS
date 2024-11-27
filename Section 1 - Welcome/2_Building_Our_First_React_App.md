@@ -43,3 +43,28 @@ export default function App() {
   * Then we destructure the Array according to the code above 
     * At the first position of the array we have the **advice** - which is the value of the State
     * Second value is a **Setter Function** which we can use to update the piece of the function - **setAdvice**
+3. Another finding which i did 
+```jsx
+import { useState } from "react";
+
+export default function App() {
+  const [Vibhav, Kumar] = useState("");
+
+  async function getAdvice() {
+    const res = await fetch("https://api.adviceslip.com/advice");
+    const data = await res.json();
+    console.log(data.slip.advice);
+    // In order to update the value that is seen in the
+    // console log insid the UI we use the useState
+    Kumar(data.slip.advice);
+  }
+
+  return (
+    <div>
+      <h1>{Vibhav}</h1>
+      <button onClick={getAdvice}>Get Advice</button>
+    </div>
+  );
+}
+```
+* you can assign any variable name to the two positions of the array and based on that you have to change accordingly
