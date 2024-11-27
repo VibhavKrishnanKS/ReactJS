@@ -1,5 +1,8 @@
 # 2. Building Our first react app
 
+
+### This is how the UI looks
+![UI](./images/2_Sandbox.png)
 1. A Component is React is just really a function that's it 
 ```jsx
   return (
@@ -58,7 +61,7 @@ function Message(props) {
     * Second value is a **Setter Function** which we can use to update the piece of the function - **setAdvice**
   * Also we can use UseEffect() - In order to save the state so that when you reload the state stays the same(we have to read on this)
 
-## How to add different components in React
+## How to add different components in React and pass the values as parameters to them
   * Also we have illustrated what is meant by **Props** which is like a parameter which you u pass to the function and you receive it on the other function using the **props** object
 
 
