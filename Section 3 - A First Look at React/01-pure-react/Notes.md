@@ -77,3 +77,6 @@ After adding the extra above lines in the code, we get the header element added 
   </script>
 </body>
 ```
+![Hello React Serving As a Child Node](./2.%20Hello%20React%20Child%20Node.png)  
+Here the **Hello React Serves as a Child Node**(where the **header element serves as a parent node**)
+
