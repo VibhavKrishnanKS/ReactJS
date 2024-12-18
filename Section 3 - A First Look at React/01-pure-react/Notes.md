@@ -24,6 +24,7 @@
 **REMEMBER**  - React is completely based on **Components**
 **Component** - This is basically just a function which starts with an upper case like below 
 1. We Can't return a JSX Code here - because we don't have the tool that renders **JSX -> Javascript**
+
 2. So we use the **Create Element function** here
 ```jsx
 <body>
@@ -39,6 +40,7 @@
 </body>
 ```
 Initially at this stage we won't be having the component rendered to the page -> Cause we didn't tell react to do it yet 
+
 3. 
 ```jsx
 <body>
@@ -57,6 +59,7 @@ Initially at this stage we won't be having the component rendered to the page ->
 ```
 After adding the extra above lines in the code, we get the header element added inside the **div(id=root)** element
 ![Rendered React Component](./1.%20Rendered%20Header%20Component%20.png)
+
 4. The createElement() function doesn't acccept only the name of the HTML element -> It totally takes three elements as parameters   
   4.1 The Three elements are   
     A. Name of the HTML element 
@@ -79,4 +82,13 @@ After adding the extra above lines in the code, we get the header element added 
 ```
 ![Hello React Serving As a Child Node](./2.%20Hello%20React%20Child%20Node.png)  
 Here the **Hello React Serves as a Child Node**(where the **header element serves as a parent node**)
+
+5. **One of the Reason why we don't write Pure React in a Real Time Developement Environment**    
+Before we would directly write HTML -> cause we used JSX to write the code   
+we don't need to write the weird thing which we did above   
+We Would directly write it as HTML basically  
+But that approach doesn't work here   
+
+
+
 
