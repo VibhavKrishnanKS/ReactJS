@@ -40,3 +40,40 @@
 ```
 Initially at this stage we won't be having the component rendered to the page -> Cause we didn't tell react to do it yet 
 3. 
+```jsx
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script>
+    function App() {
+      // This is coming from the first import which gives us the below React object
+      return React.createElement("header");
+    }
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(React.createElement(App));
+  </script>
+</body>
+```
+After adding the extra above lines in the code, we get the header element added inside the **div(id=root)** element
+![Rendered React Component](./1.%20Rendered%20Header%20Component%20.png)
+4. The createElement() function doesn't acccept only the name of the HTML element -> It totally takes three elements as parameters   
+  4.1 The Three elements are   
+    A. Name of the HTML element 
+    B. props -> here it is **null**    
+    C. Third Argument -> This is the **children of this element** (Here as a third element we just write a string which is **Hello React**)
+```jsx
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script>
+    function App() {
+      // This is coming from the first import which gives us the below React object
+      return React.createElement("header", null, "Hello React!!");
+    }
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(React.createElement(App));
+  </script>
+</body>
+```
