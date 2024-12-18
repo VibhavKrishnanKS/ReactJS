@@ -109,6 +109,9 @@ But that approach doesn't work here
 ```
 ![Output of Using Vanilla JS](./3.%20Output%20Of%20Using%20JS.png)
 
+7. Making our Application work like a **Real Clock**
+
+
 
 
 
