@@ -5,9 +5,9 @@
 
 1. **React.dev** - This is the official website of react (In order to view the documentations)
 2. Go To the Learn Part -> 
-  2.1 Installation -> 
-  2.2 Search for the heading **Try React Locally** -> 
-  2.3 Click the Hyperlink **download this HTML page** -> 
+  2.1 Installation ->     
+  2.2 Search for the heading **Try React Locally** ->     
+  2.3 Click the Hyperlink **download this HTML page** ->    
   2.4 Add the below two scripts in order to add React to your HTML
   ```jsx
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
@@ -109,8 +109,38 @@ But that approach doesn't work here
 ```
 ![Output of Using Vanilla JS](./3.%20Output%20Of%20Using%20JS.png)
 
-7. Making our Application work like a **Real Clock**
+7. Making our Application work like a **Real Clock** - We Use the Concept of State    
+**State** - This concept is Necessary in React whenever we need to update something on the screen
+```jsx
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script>
+    function App() {
+      // We can also write normal JS logic inside this function 
+      // const time = new Date().toLocaleTimeString();
+      // A New piece of State - When we create a new piece of state we don't need the above line
+      const [time, setTime] = React.useState(new Date().toLocaleTimeString())
+      // If we add only the above line - every time we refresh the page the time get's update - but we need to update it every second right - for that we use a concept called Effect
+      React.useEffect(function () {
+        setInterval(function () {
+          setTime(new Date().toLocaleTimeString());
+        }, 1000);
+      }, []);
+      // This is coming from the first import which gives us the below React object
+      return React.createElement("header", null, `Hello React!! It's ${time}`);
+    }
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(React.createElement(App));
+  </script>
+</body>
+```   
+Above is an example of a working clock that we coded only with React
 
+**NOTE** - This is not how we generally use React in the Real World 
+1. We have no way of converting JSX
+2. We have no HTTP Server - which automatically reloads the application and so on
 
 
 

@@ -14,7 +14,15 @@
   <script>
     function App() {
       // We can also write normal JS logic inside this function 
-      const time = new Date().toLocaleTimeString();
+      // const time = new Date().toLocaleTimeString();
+      // A New piece of State - When we create a new piece of state we don't need the above line
+      const [time, setTime] = React.useState(new Date().toLocaleTimeString())
+      // If we add only the above line - every time we refresh the page the time get's update - but we need to update it every second right - for that we use a concept called Effect
+      React.useEffect(function () {
+        setInterval(function () {
+          setTime(new Date().toLocaleTimeString());
+        }, 1000);
+      }, []);
       // This is coming from the first import which gives us the below React object
       return React.createElement("header", null, `Hello React!! It's ${time}`);
     }
