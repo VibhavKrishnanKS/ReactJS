@@ -13,8 +13,10 @@
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script>
     function App() {
+      // We can also write normal JS logic inside this function 
+      const time = new Date().toLocaleTimeString();
       // This is coming from the first import which gives us the below React object
-      return React.createElement("header", null, "Hello React!!");
+      return React.createElement("header", null, `Hello React!! It's ${time}`);
     }
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(React.createElement(App));
