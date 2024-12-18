@@ -26,4 +26,17 @@
 1. We Can't return a JSX Code here - because we don't have the tool that renders **JSX -> Javascript**
 2. So we use the **Create Element function** here
 ```jsx
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script>
+    function App() {
+      // This is coming from the first import which gives us the below React object
+      return React.createElement("header");
+    }
+  </script>
+</body>
 ```
+Initially at this stage we won't be having the component rendered to the page -> Cause we didn't tell react to do it yet 
+3. 
