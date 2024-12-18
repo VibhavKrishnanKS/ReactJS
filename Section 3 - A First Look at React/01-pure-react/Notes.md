@@ -89,7 +89,28 @@ we don't need to write the weird thing which we did above
 We Would directly write it as HTML basically  
 But that approach doesn't work here   
 
-6. 
+6. We can also write Normal JS also 
+```jsx
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script>
+    function App() {
+      // We can also write normal JS logic inside this function 
+      const time = new Date().toLocaleTimeString();
+      // This is coming from the first import which gives us the below React object
+      return React.createElement("header", null, `Hello React!! It's ${time}`);
+    }
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(React.createElement(App));
+  </script>
+</body>
+```
+![Output of Using Vanilla JS](./3.%20Output%20Of%20Using%20JS.png)
+
+
+
 
 
 
