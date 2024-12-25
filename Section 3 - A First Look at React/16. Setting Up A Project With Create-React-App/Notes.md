@@ -28,5 +28,6 @@ root.render(
     <App />
   </React.StrictMode>
 );
-```
-7. 
+```  
+7. Our application will run successfully on **localhost 3000**  
+8. Now we will modify our **App.js** in order to print **Hello World** on the screen  
