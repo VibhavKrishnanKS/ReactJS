@@ -16,4 +16,15 @@
 5. **node_modules** - This contains all the packages that are required for our application to run. This has the
   * React package
   * React DOM package
-
+6. The CLI Command has actually created the **index.html** and **index.js** for us   
+![Folder Structure](./images/1.Project_Structure.png)
+Also if we open **index.js**
+```jsx
+// As we can see below it already selects the root element, then uses the createRoot method from the ReactDOM library
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+```
