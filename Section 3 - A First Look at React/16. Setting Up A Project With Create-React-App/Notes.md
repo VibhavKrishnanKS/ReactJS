@@ -7,3 +7,4 @@
 3. If suppose say i want to use a specific version of react 
 > npx create-react-app@{version number} {your name of the application}    
 > Example - npx create-react-app@5 pizza menu
+> This will lock in version 5 of the react application
