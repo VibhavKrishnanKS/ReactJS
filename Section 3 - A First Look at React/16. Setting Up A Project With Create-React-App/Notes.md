@@ -5,3 +5,5 @@
 > npx create-react-app {your name of the application}  
 > Example - npx create-react-app pizza menu 
 3. If suppose say i want to use a specific version of react 
+> npx create-react-app@{version number} {your name of the application}    
+> Example - npx create-react-app@5 pizza menu
