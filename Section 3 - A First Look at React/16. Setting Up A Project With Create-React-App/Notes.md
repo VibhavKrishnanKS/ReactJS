@@ -29,5 +29,16 @@ root.render(
   </React.StrictMode>
 );
 ```  
-7. Our application will run successfully on **localhost 3000**  
-8. Now we will modify our **App.js** in order to print **Hello World** on the screen  
+7. Our application will run successfully on **localhost 3000**    
+8. Now we will modify our **App.js** in order to print **Hello React** on the screen  
+```JSX
+import './App.css';
+
+function App() {
+  return (
+    <h1>Hello React!!!</h1>
+  );
+}
+
+export default App;
+```
