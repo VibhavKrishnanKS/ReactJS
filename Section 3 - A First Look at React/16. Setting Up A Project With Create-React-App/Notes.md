@@ -8,3 +8,12 @@
 > npx create-react-app@{version number} {your name of the application}    
 > Example - npx create-react-app@5 pizza menu
 > This will lock in version 5 of the react application
+4. Once after the react application is created  
+  1.1. We have **package.json** - which contains 
+    * The name of the Application
+    * Version
+    * Dependency Scripts
+5. **node_modules** - This contains all the packages that are required for our application to run. This has the
+  * React package
+  * React DOM package
+
