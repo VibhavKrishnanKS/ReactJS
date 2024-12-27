@@ -146,3 +146,12 @@ function getBooks() {
 function getBook(id) {
   return data.find((d) => d.id === id);
 }
+
+// Destructuring 
+// Reading the data from the object
+// cumbersome - heavy difficuly to use
+const book = getBook(1);
+const title = book.title;
+const author = book.author;
+console.log(title);
+console.log(author);
