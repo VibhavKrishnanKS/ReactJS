@@ -150,8 +150,23 @@ function getBook(id) {
 // Destructuring 
 // Reading the data from the object
 // cumbersome - heavy difficuly to use
-const book = getBook(1);
-const title = book.title;
-const author = book.author;
-console.log(title);
-console.log(author);
+// Reading object like this below can be a cumbersome process 
+// first taking the object and then taking out the properties
+const book1 = getBook(1);
+const title1 = book1.title;
+const author1 = book1.author;
+console.log(title1);
+console.log(author1);
+
+// Simplifying the above process - Object Destructuring
+// Destructuring is a way to extract multiple properties from an object
+// But the problem for this approach the properties that are given inside the parenthesis should be the same as the properties of the object
+const book2 = getBook(2);
+const { title, author, pages, publicationDate, genres, hasMovieAdaptation } = book2;
+console.log(title, author, pages, publicationDate);
+console.log(genres);
+
+
+
+
+
