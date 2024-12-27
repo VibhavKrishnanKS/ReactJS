@@ -164,7 +164,21 @@ console.log(author1);
 const book2 = getBook(2);
 const { title, author, pages, publicationDate, genres, hasMovieAdaptation } = book2;
 console.log(title, author, pages, publicationDate);
+
+
+// Here we are trying to print the genres array but we want to know how to destrcture the array
+// Given below is the basic JS method
 console.log(genres);
+const primaryGenre = genres[0];
+const secondaryGenre = genres[1];
+// How we simplify the above process using destructuring
+// Here it is not necessary that we have to define the same name as it is in the array 
+// Suppose say you are assigning primary as the first variable it takes the element at the 0th index and then assigns it to the primary variable (Likewise the list goes on)
+// But for this you have to destructure the object using getBook(id) first and then we can do this assignment
+const [primary, secondary] = genres;
+console.log(primary, secondary);
+
+
 
 
 
