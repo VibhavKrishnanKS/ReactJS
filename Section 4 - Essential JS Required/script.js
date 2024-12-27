@@ -137,10 +137,12 @@ const data = [
   },
 ];
 
+// This return the whole data
 function getBooks() {
   return data;
 }
 
+// Whereas this returns the book with the specific id which is asked for
 function getBook(id) {
   return data.find((d) => d.id === id);
 }
