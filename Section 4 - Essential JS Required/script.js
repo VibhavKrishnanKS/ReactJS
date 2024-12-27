@@ -1,3 +1,5 @@
+// This already contins some starter data 
+// This contains 5 book objects
 const data = [
   {
     id: 1,
